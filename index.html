@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle switches</title>
+    <style>
+.switch{
+    margin: 250px;
+    position: relative;
+    display: inline-block;
+    width: 4.5em;
+    height: 2em;
+}
+.switch input{
+    display: none;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top:0;
+
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #ccc;
+border-radius: 30px;
+transition: 0.5s;
+}
+.slider::before{
+    position: absolute;
+    content: "off";
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: red;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.switch input:checked + .slider{
+    background-color: #2196f3;
+}
+.switch input:checked + .slider::before{
+    content: "on";
+    background-color: green;
+    transform: translateX(2.5em
+    );
+}
+    </style>
+</head>
+<body>
+   <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+   </label>
+</body>
+</html>
